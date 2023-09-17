@@ -2,26 +2,47 @@
 
 ## Description
 
-Starter NestJS API w/ Postgres
+Starter NestJS REST API w/ Postgres
 
 ## Technologies
 
 - NestJS 10
-- Express
+  - Express
 - Postgres
-- Prisma or TypeORM WIP
-- SWC Compiler
+- [Prisma](https://www.prisma.io/docs/getting-started)
+- [SWC Compiler](https://github.com/swc-project/swc)
+- Passport Magic Login
+  - Login via Magic Link
+  - 15 min expiration token
 - Jest
+- ESLint
+- Prettier
+- Swagger
 
+#### TODO:
 
-#### TODO: 
+- Prisma integration
+- NestJSX/Crud?
+- DTOs
+- Scripts
+  - Seeds
+  - DX Scripts
+- Tests
+  - Unit
+  - End to End
+- Admin panel
+- Payment processor integration
+- Security
+  - CSRF Protection
+- Authorization/RBAC
+- Deployment
+
 - Auth/Guards
   - WebAuthn/FIDO2 integration
-- ORM Integration
-- Swagger
-- Tests
-- Caching
-
+- Pagination
+- [Caching](https://docs.nestjs.com/techniques/caching)
+- Health checks
+- Rate limiting
 
 ## Installation
 
@@ -53,4 +74,22 @@ $ yarn run test:e2e
 
 # test coverage
 $ yarn run test:cov
+```
+
+### Prisma/Database
+
+```bash
+$ prisma db pull # to turn your database schema into a Prisma schema.
+$ prisma generate  # to generate the Prisma Client. You can then start querying your database.
+$ npx prisma migrate dev --name "migration_name" # Migrate database
+```
+
+### Commands for Postgres 14
+
+[Postgres Docs](https://www.postgresql.org/docs/14/)
+
+```bash
+$ psql my_db # enter shell
+$ createdb --username=USERNAME my_db # create db
+$ dropdb my_db # drop db
 ```
