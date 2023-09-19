@@ -21,7 +21,7 @@ Starter NestJS REST API w/ Postgres
 
 #### TODO:
 
-- Prisma integration
+- Nodemailer
 - NestJSX/Crud?
 - DTOs
 - Scripts
